@@ -2,6 +2,9 @@ clear all;
 close all;
 clc
 
+fprintf('Script to show relation between poles and modes.\n');
+fprintf('Click on real-imag plot to change the poles.\n');
+fprintf('Close the windows to stop the script.\n');
 while true
     multeplicita=input('Set multeplicity:\n');
     if isscalar(multeplicita)==0
@@ -44,7 +47,7 @@ axis square
 axis manual
 
 p1=plot(real(polo), imag(polo), 'x','MarkerSize', 20);
-p2=plot(real(polo),-imag(polo), 'x','MarkerSize', 20);
+p2=plot(real(polo),-imag(polo), 'x','MarkerSize', 20,'Color',p1.Color);
 
 
 grid on
